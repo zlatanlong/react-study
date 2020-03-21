@@ -2,6 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 React 学习项目
 学习网站[react官方中文文档](https://react.docschina.org/)
+- jingziqi 官网井字棋小游戏
 - index02 初识react
 - index03 条件渲染
 - index04 样式渲染
