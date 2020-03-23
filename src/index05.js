@@ -41,7 +41,6 @@ class HellowWorld extends React.Component {
 }
 
 
-
 // ReactDOM.render(
 //   <Childcom weather = 'no下雨' />,
 //   document.querySelector('#root')

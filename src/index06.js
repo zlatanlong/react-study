@@ -1,3 +1,6 @@
+import React from "react";
+import ReactDOM from "ReactDOM";
+
 function FormattedDate(props) {
   return <h2>It is {props.date.toLocaleTimeString()}.</h2>;
 }
@@ -32,7 +35,7 @@ class Clock extends React.Component {
     return (
       <div>
         <h1>Hello, world!</h1>
-        <FormattedDate date={this.state.date} />
+        <FormattedDate date={this.state.date}/>
       </div>
     );
   }
@@ -42,14 +45,14 @@ function App() {
   // 每个 Clock 组件都会单独设置它自己的计时器并且更新它。
   return (
     <div>
-      <Clock />
-      <Clock />
-      <Clock />
+      <Clock/>
+      <Clock/>
+      <Clock/>
     </div>
   );
 }
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App/>, document.getElementById('root'));
 
 
 // 可以让 setState() 接收一个函数而不是一个对象。这个函数用上一个 state 作为第一个参数，将此次更新被应用时的 props 做为第二个参数

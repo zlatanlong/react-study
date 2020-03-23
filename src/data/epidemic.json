@@ -1,0 +1,240 @@
+[
+  {
+    "id": 1,
+    "provinceName": "湖北",
+    "confirmedNum": 67800,
+    "curesNum": 59433,
+    "deathsNum": 3144
+  },
+  {
+    "id": 2,
+    "provinceName": "香港",
+    "confirmedNum": 317,
+    "curesNum": 100,
+    "deathsNum": 4
+  },
+  {
+    "id": 3,
+    "provinceName": "台湾",
+    "confirmedNum": 169,
+    "curesNum": 28,
+    "deathsNum": 2
+  },
+  {
+    "id": 4,
+    "provinceName": "北京",
+    "confirmedNum": 514,
+    "curesNum": 400,
+    "deathsNum": 8
+  },
+  {
+    "id": 5,
+    "provinceName": "广东",
+    "confirmedNum": 1407,
+    "curesNum": 1329,
+    "deathsNum": 8
+  },
+  {
+    "id": 6,
+    "provinceName": "上海",
+    "confirmedNum": 394,
+    "curesNum": 328,
+    "deathsNum": 4
+  },
+  {
+    "id": 7,
+    "provinceName": "甘肃",
+    "confirmedNum": 134,
+    "curesNum": 113,
+    "deathsNum": 2
+  },
+  {
+    "id": 8,
+    "provinceName": "浙江",
+    "confirmedNum": 1237,
+    "curesNum": 1219,
+    "deathsNum": 1
+  },
+  {
+    "id": 9,
+    "provinceName": "福建",
+    "confirmedNum": 307,
+    "curesNum": 295,
+    "deathsNum": 1
+  },
+  {
+    "id": 10,
+    "provinceName": "山东",
+    "confirmedNum": 766,
+    "curesNum": 750,
+    "deathsNum": 7
+  },
+  {
+    "id": 11,
+    "provinceName": "澳门",
+    "confirmedNum": 19,
+    "curesNum": 10,
+    "deathsNum": 0
+  },
+  {
+    "id": 12,
+    "provinceName": "陕西",
+    "confirmedNum": 248,
+    "curesNum": 239,
+    "deathsNum": 3
+  },
+  {
+    "id": 13,
+    "provinceName": "黑龙江",
+    "confirmedNum": 484,
+    "curesNum": 466,
+    "deathsNum": 13
+  },
+  {
+    "id": 14,
+    "provinceName": "四川",
+    "confirmedNum": 543,
+    "curesNum": 536,
+    "deathsNum": 3
+  },
+  {
+    "id": 15,
+    "provinceName": "河北",
+    "confirmedNum": 319,
+    "curesNum": 310,
+    "deathsNum": 6
+  },
+  {
+    "id": 16,
+    "provinceName": "江苏",
+    "confirmedNum": 633,
+    "curesNum": 631,
+    "deathsNum": 0
+  },
+  {
+    "id": 17,
+    "provinceName": "广西",
+    "confirmedNum": 254,
+    "curesNum": 250,
+    "deathsNum": 2
+  },
+  {
+    "id": 18,
+    "provinceName": "云南",
+    "confirmedNum": 176,
+    "curesNum": 172,
+    "deathsNum": 2
+  },
+  {
+    "id": 19,
+    "provinceName": "河南",
+    "confirmedNum": 1273,
+    "curesNum": 1250,
+    "deathsNum": 22
+  },
+  {
+    "id": 20,
+    "provinceName": "江西",
+    "confirmedNum": 936,
+    "curesNum": 934,
+    "deathsNum": 1
+  },
+  {
+    "id": 21,
+    "provinceName": "重庆",
+    "confirmedNum": 577,
+    "curesNum": 570,
+    "deathsNum": 6
+  },
+  {
+    "id": 22,
+    "provinceName": "海南",
+    "confirmedNum": 168,
+    "curesNum": 161,
+    "deathsNum": 6
+  },
+  {
+    "id": 23,
+    "provinceName": "天津",
+    "confirmedNum": 137,
+    "curesNum": 133,
+    "deathsNum": 3
+  },
+  {
+    "id": 24,
+    "provinceName": "湖南",
+    "confirmedNum": 1018,
+    "curesNum": 1014,
+    "deathsNum": 4
+  },
+  {
+    "id": 25,
+    "provinceName": "安徽",
+    "confirmedNum": 990,
+    "curesNum": 984,
+    "deathsNum": 6
+  },
+  {
+    "id": 26,
+    "provinceName": "贵州",
+    "confirmedNum": 146,
+    "curesNum": 144,
+    "deathsNum": 2
+  },
+  {
+    "id": 27,
+    "provinceName": "山西",
+    "confirmedNum": 133,
+    "curesNum": 133,
+    "deathsNum": 0
+  },
+  {
+    "id": 28,
+    "provinceName": "辽宁",
+    "confirmedNum": 126,
+    "curesNum": 124,
+    "deathsNum": 2
+  },
+  {
+    "id": 29,
+    "provinceName": "吉林",
+    "confirmedNum": 93,
+    "curesNum": 92,
+    "deathsNum": 1
+  },
+  {
+    "id": 30,
+    "provinceName": "新疆",
+    "confirmedNum": 76,
+    "curesNum": 73,
+    "deathsNum": 3
+  },
+  {
+    "id": 31,
+    "provinceName": "宁夏",
+    "confirmedNum": 75,
+    "curesNum": 75,
+    "deathsNum": 0
+  },
+  {
+    "id": 32,
+    "provinceName": "内蒙古",
+    "confirmedNum": 75,
+    "curesNum": 74,
+    "deathsNum": 1
+  },
+  {
+    "id": 33,
+    "provinceName": "青海",
+    "confirmedNum": 18,
+    "curesNum": 18,
+    "deathsNum": 0
+  },
+  {
+    "id": 34,
+    "provinceName": "西藏",
+    "confirmedNum": 1,
+    "curesNum": 1,
+    "deathsNum": 0
+  }
+]

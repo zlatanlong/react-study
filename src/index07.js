@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 class Toggle extends React.Component {
   constructor(props) {
     super(props);
@@ -10,18 +11,20 @@ class Toggle extends React.Component {
   }
 
   handleClick() {
-    this.setState((a,b)=> {
-        console.log('第一个参数',a)
-        console.log('第二个参数',b)
+    this.setState((a, b) => {
+        console.log('第一个参数state', a);
+        console.log('第二个参数props', b)
       }
-    )
+    );
     this.setState(prevState => ({
-      isToggleOn: !prevState.isToggleOn
-    }));
+        isToggleOn: !prevState.isToggleOn
+      })
+    );
   }
 
   render() {
     return (
+      // <button onClick={() => this.handleClick()}>
       <button onClick={this.handleClick}>
         {this.state.isToggleOn ? 'ON' : 'OFF'}
       </button>
@@ -29,7 +32,9 @@ class Toggle extends React.Component {
   }
 }
 
+let user = {gender: 1};
+user.name = 'Bob';
 ReactDOM.render(
-  <Toggle chuancan='传参'/>,
+  <Toggle chuancan='传参' hah={user}/>,
   document.getElementById('root')
 );

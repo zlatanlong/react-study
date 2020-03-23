@@ -17,7 +17,7 @@ import './index.css';
 
 // function clock(params) {
 //   let time = new Date().toString()
-//   let element = ( 
+//   let element = (
 //     <div>
 //       <h1>现在时间是：{time}</h1>
 //       <h2>这是副标题 </h2>
@@ -39,7 +39,7 @@ function Clock(props) {
 
 function run() {
   ReactDOM.render(
-    <Clock data={new Date()} />,
+    <Clock data={new Date()}/>,
     document.querySelector('#root')
   )
 }

@@ -15,7 +15,7 @@ let man = '发热'
 let element2 = (
   <div>
     <h1>今天是否隔离</h1>
-    <h2>{man === '发热'?<button>隔离</button>:'躺床上'}</h2>
+    <h2>{man === '发热' ? <button>隔离</button> : '躺床上'}</h2>
   </div>
 )
 
@@ -29,7 +29,7 @@ let element4 = (
 let element3 = (
   <div>
     <h1>今天是否隔离</h1>
-    <h2>{man === '发热'?<button>隔离</button>:element4}</h2>
+    <h2>{man === '发热' ? <button>隔离</button> : element4}</h2>
   </div>
 )
 
