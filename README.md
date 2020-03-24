@@ -11,7 +11,23 @@ React 学习项目
 - index07 事件处理绑定 setState的参数
 - index08 事件传参数
 - index09 插槽
+- index10 路由
+- index11 状态管理redux
 
 子传父: 通过**调用父的函数**从而操纵父的数据
 
 react事件名是用驼峰写法，并且函数要写在{}中
+## 路由：
+route replace 替换路由 不能后退
+动态路由：
+```jsx harmony
+<Route path="/news/:id" exact component={News}/>
+
+<Link to='/news/123'>新闻</Link>
+// 组件中
+{props.match.params.id}
+```
+
+## 重定向：
+<Switch> 只显示一个
+<Redirect to='/admin'/> 重定向
