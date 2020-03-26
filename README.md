@@ -13,6 +13,7 @@ React 学习项目
 - index09 插槽
 - index10 路由
 - index11 状态管理redux
+- index12 react-redux
 
 子传父: 通过**调用父的函数**从而操纵父的数据
 
@@ -31,3 +32,11 @@ route replace 替换路由 不能后退
 ## 重定向：
 <Switch> 只显示一个
 <Redirect to='/admin'/> 重定向
+
+## react-redux
+Provider 将store和App(根组件进行关联)
+MapStatetoProps: 这个函数用于将store的state映射到组件的props里
+
+connect: 将组件和数据(方法)进行连接
+
+初始化：reducer和store
