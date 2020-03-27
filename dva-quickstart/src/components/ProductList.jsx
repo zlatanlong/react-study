@@ -16,11 +16,14 @@ const ProductList = ({ onDelete, products }) => {
       );
     },
   }];
+  
   return (
-    <Table
-      dataSource={products}
-      columns={columns}
-    />
+    <div>
+      <Table
+        dataSource={products}
+        columns={columns}
+      />
+    </div>
   );
 };
 

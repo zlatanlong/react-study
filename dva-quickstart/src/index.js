@@ -2,12 +2,12 @@ import dva from 'dva';
 import './index.css';
 
 // 1. Initialize
+// 在组件connect之后，每个组件都能拿到初始化的数据
+// initialState的对象对应命名空间为products的model
 const app = dva({
   initialState: {
-    products: [
-      { name: 'dva', id: 1 },
-      { name: 'antd', id: 2 },
-    ],
+    // products: {
+    // }
   },
 });
 
