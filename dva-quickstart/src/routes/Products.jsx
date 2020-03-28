@@ -31,10 +31,17 @@ const Products = ({ dispatch, products }) => {
       },
     })
   }
+  const handleTestCnode = () => {
+    dispatch({
+      type: "products/testCnode",
+    })
+  }
+
   return (
     <div>
       <button onClick={handleSetName}>SetName</button>
       <button onClick={handleSetNameAsync}>SetNameAsync</button>
+      <button onClick={handleTestCnode}>Cnode</button>
       <p>{products.name}</p>
       <h2>List of Products</h2>
       <ProductList onDelete={handleDelete} products={products.data} />
@@ -44,10 +51,11 @@ const Products = ({ dispatch, products }) => {
 
 /**
  * 把传递的对象products属性单独拿出来再封装出去
+ * 返回值中的小括号是为了消除歧义，参数是解构赋值
  * @param {包含products属性的对象} param0 
  */
-const mapFun = ({products}) => ({products})
-//export default Products;
+const mapFun = ({ products }) => ({ products })
+//接收一个函数，返回一个函数
 //connect(f1)(Com1)通过函数f1,将model中的值转递到组件Com1的参数中
 export default connect(
   mapFun

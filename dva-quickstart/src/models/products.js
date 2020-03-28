@@ -1,3 +1,5 @@
+import * as service from '../services/example';
+
 export default {
   // 数据和方法都是绑定着命名空间
   namespace: 'products',
@@ -8,7 +10,8 @@ export default {
       { name: 'antd', id: 2 },
       { name: 'umi', id: 3 },
       { name: 'hhh', id: 4 },
-    ]
+    ],
+    cnode: {}
   },
   // reducers必须有一个返回值
   reducers: {
@@ -22,14 +25,20 @@ export default {
     },
     setName(state, action) {
       return { ...state, name: action.data.name };
+    },
+    setCnode(state, action) {
+      return { ...state, cnode: action.data };
     }
   },
 
+  /**
+   * 有副作用的 异步的
+   */
   effects: {
     /**
      * 
-     * @param {payload} param0 payload是dispatch传递的action 
-     * @param {put} param1 put的参数是一个action 
+     * @param {payload} param0 payload是dispatch传递的action
+     * @param {put, call} param1 put的参数是一个新的action, call是call一个接口
      */
     *setNameAsync({ data }, { put, call }) {
       const newAction = {
@@ -37,6 +46,34 @@ export default {
         data: data,
       }
       yield put(newAction)
+    },
+    * testCnode(action, { put, call }) {
+      let rel = yield call(service.testCnode)
+      if (rel.data) {
+        yield put({
+          type: 'setCnode',
+          data: rel.data,
+        })
+      }
+      console.log(rel)
+    }
+
+  },
+  subscriptions: {
+    /**
+     * 
+     * @param {*} param0 dispatch就是它，可以传action，history可以判断路由
+     */
+    testProducts({ dispatch, history }) {
+      history.listen(
+        (canshu) => {
+          console.log(canshu)
+          if (canshu.pathname === '/products') {
+            console.log('hahah')
+          }
+        }
+      )
     }
   }
+
 };
