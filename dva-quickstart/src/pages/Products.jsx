@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'dva';
 import ProductList from '../components/ProductList';
+import Frame from '../components/Frame/index';
 
 const Products = ({ dispatch, products }) => {
   function handleDelete(id) {
@@ -50,7 +51,8 @@ const Products = ({ dispatch, products }) => {
 };
 
 /**
- * 把传递的对象products属性单独拿出来再封装出去
+ * 把传递的对象products属性单独拿出来再封装出去,
+ * 这个products是根据命名空间区分的
  * 返回值中的小括号是为了消除歧义，参数是解构赋值
  * @param {包含products属性的对象} param0 
  */

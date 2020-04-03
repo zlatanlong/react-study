@@ -1,14 +1,20 @@
 import React from 'react';
-import { Router, Route, Switch } from 'dva/router';
-import IndexPage from './routes/IndexPage';
-import Products from './routes/Products';
+import { Router, Route, Switch, Redirect } from 'dva/router';
+import IndexPage from './pages/IndexPage';
+import { mainRoutes } from './routes';
 
 function RouterConfig({ history }) {
   return (
     <Router history={history}>
       <Switch>
-        <Route path="/" exact component={IndexPage} />
-        <Route path="/products" exact component={Products} />
+        {mainRoutes.map(route => {
+          return (
+            <Route key={route.path} {...route} />
+          )
+        })}
+        {/* 子路由 */}
+        <Route path="/admin" render={routeProps => <IndexPage {...routeProps} />} />
+        <Redirect to="/404" />
       </Switch>
     </Router>
   );
