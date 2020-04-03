@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'dva';
 import ProductList from '../components/ProductList';
-import Frame from '../components/Frame/index';
 
 const Products = ({ dispatch, products }) => {
   function handleDelete(id) {
