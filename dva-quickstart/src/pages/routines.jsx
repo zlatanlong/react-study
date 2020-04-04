@@ -53,7 +53,7 @@ class Routines extends Component {
 
   render() {
     return (
-      <Card extra={<Button type="primary">新增</Button>}>
+      <Card extra={<Button type="primary" onClick={()=>this.props.history.push('/admin/routines/edit')}>新增</Button>}>
         <Table columns={this.state.columns} dataSource={this.state.dataSource} bordered />
       </Card>
     );

@@ -14,6 +14,7 @@ function RouterConfig({ history }) {
         })}
         {/* 子路由 */}
         <Route path="/admin" render={routeProps => <IndexPage {...routeProps} />} />
+        <Redirect to="/admin" from="/" />
         <Redirect to="/404" />
       </Switch>
     </Router>
