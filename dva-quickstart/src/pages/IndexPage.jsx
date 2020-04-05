@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'dva';
-import Frame from '../components/Frame/index';
+import Frame from '../components/Frame/Index.jsx';
 import { Route, Switch, Redirect } from 'dva/router';
 import { adminRoutes } from '../routes';
 import { isLogined } from '../utils/authc';
