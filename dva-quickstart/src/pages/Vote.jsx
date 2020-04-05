@@ -6,7 +6,7 @@ const { TabPane } = Tabs;
 
 
 const Vote = () => {
-  const [votesTitle, setVotesTitle] = useState('2018学习成绩统计');
+  const [votesTitle] = useState('2018学习成绩统计');
   const [votes, setVotes] = useState([]);
   const [modalVisible, setModalVisible] = useState(false);
   const [currentVote, setCurrentVote] = useState({ type: 0, inputs: [], options: [], checkBoxs: [] });
@@ -15,21 +15,21 @@ const Vote = () => {
   const [tempCheckBox, setTempCheckBox] = useState('');
 
   // 展示数据格式
-  let temp = [
-    {
-      title: '你的其中考试成绩如何?',
-      type: 0,
-      inputs: ['语文', '数学', '英语',]
-    }, {
-      title: '你觉得那个老师更好?',
-      type: 1,
-      options: ['语文老师', '数学老师', '政治老师',]
-    }, {
-      title: '你更喜欢哪个科目?',
-      type: 2,
-      checkBoxs: ['数学', '英语', '计算机']
-    }
-  ]
+  // let temp = [
+  //   {
+  //     title: '你的其中考试成绩如何?',
+  //     type: 0,
+  //     inputs: ['语文', '数学', '英语',]
+  //   }, {
+  //     title: '你觉得那个老师更好?',
+  //     type: 1,
+  //     options: ['语文老师', '数学老师', '政治老师',]
+  //   }, {
+  //     title: '你更喜欢哪个科目?',
+  //     type: 2,
+  //     checkBoxs: ['数学', '英语', '计算机']
+  //   }
+  // ]
 
   const onAddVote = () => {
     setModalVisible(true)
@@ -38,7 +38,7 @@ const Vote = () => {
   const handleOk = e => {
     votes.push(currentVote)
     setCurrentVote({ type: currentVote.type, inputs: [], options: [], checkBoxs: [] })
-    setVotes(votes)
+    setVotes([...votes])
     message.success('添加成功')
     setModalVisible(false)
   };
@@ -49,21 +49,18 @@ const Vote = () => {
 
   useEffect(() => {
     let tempVotes = JSON.parse(localStorage.getItem('votes'));
-    console.log(tempVotes);
     if (tempVotes !== undefined) {
+      setVotes(tempVotes);
     }
-  })
+  }, []);
 
-  // useEffect(() => {
-  //   let tempVotes = JSON.parse(localStorage.getItem('votes'));
-  //   if (tempVotes !== undefined) {
-  //     setVotes(tempVotes);
-  //   }
-  //   const myInterval = setInterval(() => {
-  //     localStorage.setItem('votes', JSON.stringify(votes));
-  //   }, 5000);
-  //   return () => { clearInterval(myInterval); }
-  // })
+  useEffect(() => {
+    localStorage.setItem('votes', JSON.stringify(votes));
+    message.info('已保存')
+    // const myInterval = setInterval(() => {
+    // }, 3000);
+    // return () => { clearInterval(myInterval); }
+  }, [votes]);
 
 
 
