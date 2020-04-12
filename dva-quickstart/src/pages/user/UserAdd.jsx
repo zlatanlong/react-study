@@ -7,13 +7,14 @@ import XLSX from 'xlsx';
 const UserAdd = () => {
   const [columns, setColumns] = useState([]);
   const [dataSource, setDataSource] = useState([]);
+  const [fileList, setFileList] = useState([]);
 
   const props = {
     beforeUpload: file => {
+      setFileList([file]);
       file.arrayBuffer().then(
         res => {
           let workbook = XLSX.read(res, { type: 'buffer', cellHTML: false, });
-          console.log(workbook.Sheets.Sheet1);
           let sheet = workbook.Sheets.Sheet1;
           let tempData = {}; // {1:{A:,B:,}} 指第1行的数据，A列是啥，B列是啥
           let tempColumns = [];
@@ -29,11 +30,10 @@ const UserAdd = () => {
             }
           }
           // tempData第一行是题头
-
           for (const key in tempData) {
             if (tempData.hasOwnProperty(key) && key === '1') {
-              const row = tempData[key];
               // 第一行
+              const row = tempData[key];
               for (const key in row) {
                 if (row.hasOwnProperty(key)) {
                   const element = row[key];
@@ -45,6 +45,7 @@ const UserAdd = () => {
                 }
               }
             } else if (tempData.hasOwnProperty(key)) {
+              // 其他行
               const row = tempData[key];
               tempTableData.push({
                 ...row,
@@ -52,15 +53,14 @@ const UserAdd = () => {
               })
             }
           }
-          console.log(tempColumns);
-          console.log(tempTableData);
           setColumns(tempColumns);
           setDataSource(tempTableData);
+          message.success('处理成功！')
         }
       )
-
       return false;
-    }
+    },
+    fileList
   };
 
   return (
